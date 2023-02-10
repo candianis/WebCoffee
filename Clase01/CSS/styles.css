@@ -1,0 +1,47 @@
+/****** Selector tags ******/
+
+body{
+    background-color: #F5EDCE;
+}
+
+hr{
+    height: 10px;
+    width: 50%;
+    background-color: #58287F;
+    border-style: none;
+    border-radius: 10px;
+}
+
+p{
+
+}
+
+th{
+    color: #58287F;
+}
+
+td{
+    color:#1A0000;
+}
+
+h1{
+    color: #89C4E1;
+}
+
+li{
+    color: #1A0000;
+}
+
+h2{
+    color: #89C4E1;
+}
+
+/****** Class selectors ******/
+.default-text{
+
+}
+
+/****** ID selectors (casi no se usa) ******/
+#boss{
+    background-color:#89C4E1;
+}

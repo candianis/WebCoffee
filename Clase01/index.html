@@ -2,8 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Augusto Cogollo</title>
+    <title>Portfolio_Webpage</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <style>
+        hr{
+            height: 5px;
+            width: 50%;
+            background-color: #C0EEF2;
+            border-style: none;
+            border-radius: 10px;
+            border-right: 10px;
+        }
+    </style>
 </head>
 
 
@@ -14,7 +24,7 @@
                 <img src="Images/profilePic.JPG" alt="Profile image" width="250" height="250"> 
             </td>
             <td>    
-                <h1>Augusto Cogollo</h1>
+                <h1>P. Augusto Cogollo Cancino</h1>
                 <p><em>Graphics and Game Engine programmer</em></p>
                 <br>
                 <p>I am a student at the European College for Communication and the Arts.
@@ -34,13 +44,14 @@
     <hr>
     <h2>Hobbies</h2>
     <ol>
-        <li>B2 French at Incarnate Word</li>
-        <li>Studying Lisp Scheme</li>
-        <li>Vim connoisseur</li>
+        <li>B2 French at <a href="https://www.ciw.edu.mx/">University of the Incarnate Word</a></li>
+        <li>Reads about European history</li>
+        <li>Studies Lisp Scheme</li>
+        <li>Map painter enjoyer</li>
     </ol>
     <hr>
     <h2>Complete work experience</h2>
-    <table cellspacing="10">
+    <table cellspacing="10" class="work-experience">
         <thead>
             <tr>
                 <th>Date</th>
@@ -50,20 +61,26 @@
         </thead>
         <tbody>
             <tr>
-                <td>Sep 2021 - Present </td>
-                <td>Coco School </td>
-                <td>Graphics programmer</td>
+                <td>Apr 2022 - Jan 2023</td>
+                <td>Terathon software</td>
+                <td>Game Engine Programmer</td>
+            </tr>
+            <tr>
+                <td>Jan 2023 - Present</td>
+                <td>Nvidia Corporation</td>
+                <td>Graphics Programmer</td>
             </tr>
         </tbody>
         
     </table>
+    <p>*</p>
     <hr>
 
     <h2>Skills</h2>
-    <table cellspacing="10">
+    <table cellspacing="10" class="skills">
         <tr>
             <td>
-                <table>
+                <table class="skills-internal">
                     <tr>
                         <td>Unity</td>
                         <td>⭐⭐⭐</td>
@@ -76,18 +93,22 @@
                         <td>OpenGL</td>
                         <td>⭐⭐</td>
                     </tr>
+                    <tr>
+                        <td>Racket</td>
+                        <td>⭐</td>
+                    </tr>
                     
                 </table>
             </td>
             <td>
-                <table>
-                    <tr>
-                        <td>C</td>
-                        <td>⭐⭐⭐</td>
-                    </tr>
+                <table class="skills-internal">
                     <tr>
                         <td>C++</td>
                         <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>⭐⭐⭐</td>
                     </tr>
                     <tr>
                         <td>C#</td>

@@ -1,56 +1,77 @@
 /****** Selector tags ******/
 
 body{
-    background-color: #332C39;
+    background-color: #181823;
     
 }
 /***** Headings *****/
 h1{
-    color: #C92C6D;
+    color: #537FE7;
     font: italic 3em "Century Gothic", serif;
 }
 h2{
-    color: #C92C6D;
-    font: bold 2em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    color: #537FE7;
+    font: bold 1.5em "Candara";
+     
 }
 h3{
-
+    color:#537FE7;
+    font: bold 1.5em "Candara";
 }
 
 p{
-    color: #F0EEED;
+    color: #E9F8F9;
+    font: 1em "Consolas";
 }
 
-hr{
-    height: 10px;
-    width: 50%;
-    background-color: #609EA2;
-    border-style: none;
-    border-radius: 10px;
-}
+
 
 a{
-    color: #89C4E1;
+    color: #C0EEF2;
 }
 
 th{
-    color: #F0EEED;
+    color: #E9F8F9;
+    font-family: Consolas;
 }
 
 td{
-    color: #F0EEED;
+    color: #E9F8F9;
+    font-family: Consolas;
 }
 
-
-li{
-    color: #F0EEED;
+ul{
+    color: #E9F8F9;
+    font-family: "Consolas";
+    list-style-type: square;
 }
 
+ol{
+    color:#E9F8F9;
+    font-family: "Consolas";
+}
 
 /****** Class selectors ******/
 .default-text{
 
+}
+
+.work-experience{
+    border-style: dotted;
+    border-color:#89C4E1;
+    text-align: center;
+}
+
+.skills{
+    width: 40%;
+    background-color: #537FE7;
+}
+
+.skills-internal{
+    border-style: dotted;
+    border-color:#181823;
+    border-spacing: 10px;
+    text-align:left;
 }
 
 /****** ID selectors (casi no se usa) ******/

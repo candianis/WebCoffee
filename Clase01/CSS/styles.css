@@ -1,40 +1,52 @@
 /****** Selector tags ******/
 
 body{
-    background-color: #F5EDCE;
+    background-color: #332C39;
+    
+}
+/***** Headings *****/
+h1{
+    color: #C92C6D;
+    font: italic 3em "Century Gothic", serif;
+}
+h2{
+    color: #C92C6D;
+    font: bold 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+h3{
+
+}
+
+p{
+    color: #F0EEED;
 }
 
 hr{
     height: 10px;
     width: 50%;
-    background-color: #58287F;
+    background-color: #609EA2;
     border-style: none;
     border-radius: 10px;
 }
 
-p{
-
+a{
+    color: #89C4E1;
 }
 
 th{
-    color: #58287F;
+    color: #F0EEED;
 }
 
 td{
-    color:#1A0000;
+    color: #F0EEED;
 }
 
-h1{
-    color: #89C4E1;
-}
 
 li{
-    color: #1A0000;
+    color: #F0EEED;
 }
 
-h2{
-    color: #89C4E1;
-}
 
 /****** Class selectors ******/
 .default-text{

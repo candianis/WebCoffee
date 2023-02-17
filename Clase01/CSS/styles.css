@@ -32,30 +32,26 @@ a{
 
 th{
     color: #E9F8F9;
-    font-family: Consolas;
+    font-family: "Consolas", monospace;
 }
 
 td{
     color: #E9F8F9;
-    font-family: Consolas;
+    font-family: "Consolas", monospace;
 }
 
 ul{
     color: #E9F8F9;
-    font-family: "Consolas";
+    font-family: "Consolas", monospace;
     list-style-type: square;
 }
 
 ol{
     color:#E9F8F9;
-    font-family: "Consolas";
+    font-family: "Consolas", monospace;
 }
 
 /****** Class selectors ******/
-.default-text{
-
-}
-
 .work-experience{
     border-style: dotted;
     border-color:#89C4E1;

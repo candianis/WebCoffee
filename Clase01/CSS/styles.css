@@ -1,76 +1,58 @@
-/****** Selector tags ******/
+/***** Tag Selectors *****/
 
 body{
-    background-color: #181823;
-    
-}
-/***** Headings *****/
-h1{
-    color: #537FE7;
-    font: italic 3em "Century Gothic", serif;
-}
-h2{
-    color: #537FE7;
-    font: bold 1.5em "Candara";
-     
-}
-h3{
-    color:#537FE7;
-    font: bold 1.5em "Candara";
-}
-
-p{
-    color: #E9F8F9;
-    font: 1em "Consolas";
-}
-
-
-
-a{
-    color: #C0EEF2;
-}
-
-th{
-    color: #E9F8F9;
-    font-family: "Consolas", monospace;
-}
-
-td{
-    color: #E9F8F9;
-    font-family: "Consolas", monospace;
-}
-
-ul{
-    color: #E9F8F9;
-    font-family: "Consolas", monospace;
-    list-style-type: square;
-}
-
-ol{
-    color:#E9F8F9;
-    font-family: "Consolas", monospace;
-}
-
-/****** Class selectors ******/
-.work-experience{
-    border-style: dotted;
-    border-color:#89C4E1;
+    margin: 0;
+    font-family: 'Red Hat Mono', monospace;
     text-align: center;
 }
 
-.skills{
-    width: 40%;
-    background-color: #537FE7;
+h1{
+    margin:0;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.skills-internal{
-    border-style: dotted;
-    border-color:#181823;
-    border-spacing: 10px;
-    text-align:left;
+h2{
+    margin: 0;
+    font-family: 'Alata', sans-serif;
 }
 
-/****** ID selectors (casi no se usa) ******/
-#boss{
-    background-color:#89C4E1;
+h3{
+    margin: 0;
+}
+
+/***** Class Selectors *****/
+
+.top-container{
+    height: 200px;
+    width: 200px;
+    background-color: aquamarine;
+    position: absolute;
+}
+
+.mid-container{
+    height: 200px;
+    width: 200px;
+    background-color: coral;    
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+
+.bot-container{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    position: absolute;
+    left: 400px;
+    top: 400px;
+    
+}
+
+.mobile{
+    height: 200px;
+    width: 200px;
+    background-color: darkslateblue;
+    position: absolute;
+    left: 200px;
+    top: 200px;
 }

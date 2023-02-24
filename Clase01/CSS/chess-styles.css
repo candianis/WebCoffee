@@ -1,0 +1,25 @@
+
+img {
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    padding: 20px 20px;
+}
+
+.chess-row{
+    display: block;
+}
+
+.chess-square-black{
+    height: 100px;
+    width: 100px;
+    background-color: #40513B;
+    display: inline-block;
+}
+
+.chess-square-white{
+    height: 100px;
+    width: 100px;
+    background-color: #9DC08B;
+    display: inline-block;
+}

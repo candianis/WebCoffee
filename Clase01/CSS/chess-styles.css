@@ -16,7 +16,6 @@ img {
     width: 100px;
     background-color: #40513B;
     display: inline-block;
-    text-align: center;
 }
 
 .chess-square-white{
@@ -24,7 +23,7 @@ img {
     width: 100px;
     background-color: #9DC08B;
     display: inline-block;
-    text-align: center;
-    /*margin-left: -4px;
+    /*Second way to remove whitespace
+    margin-left: -4px;
     margin-top: -4px;*/
 }

@@ -4,6 +4,7 @@ body{
     margin: 0;
     font-family: 'Red Hat Mono', monospace;
     text-align: center;
+    background-color: #FFF2F2;
 }
 
 h1{
@@ -23,36 +24,67 @@ h3{
 /***** Class Selectors *****/
 
 .top-container{
-    height: 200px;
-    width: 200px;
-    background-color: aquamarine;
-    position: absolute;
+    position: relative;
+    background: linear-gradient(180deg,#FFF2F2, #8EA7E9, #7286D3, #181823 70%);
 }
 
 .mid-container{
-    height: 200px;
+    background-color: black;
     width: 200px;
-    background-color: coral;    
-    position: absolute;
-    left: 200px;
-    top: 200px;
 }
 
 .bot-container{
-    height: 200px;
-    width: 200px;
-    background-color: aqua;
-    position: absolute;
-    left: 400px;
-    top: 400px;
-    
+    width: 100%;
 }
 
-.mobile{
-    height: 200px;
-    width: 200px;
-    background-color: darkslateblue;
+.icon-top{
+    width: 180px;
     position: absolute;
-    left: 200px;
-    top: 200px;
+    top: 15px;
+    right: 300px;
+}
+
+.icon-bot{
+    width: 180px;
+    position: absolute;
+    bottom: 100px;
+    left: 170px;
+}
+
+.mountain{
+    position: relative;
+    z-index: 0;
+    left: 0%;
+    top: 100px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.name{
+    position: relative;
+    bottom: 375px;
+    right: 200px;
+    font-size: 3em;
+    background-color: #FFF2F2B2;
+    color: #181823;
+    display: inline-block;
+    padding: 2.5px 20px;
+    border-radius: 40px;
+}
+
+.subtitle{
+    position: relative;
+    bottom: 250px;
+    right: 150px;
+    font-size: 20px;
+}
+
+.profession{
+    text-decoration: underline;
+}
+
+.skill-row{
+    display: inline-block;
+    margin: 100px;
 }

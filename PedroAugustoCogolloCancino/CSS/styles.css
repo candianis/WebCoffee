@@ -1,0 +1,16 @@
+
+body{
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+a{
+    color: cyan;
+}
+
+hr{
+    
+}
+
+.tetromino-Img{
+    margin: 0px 50px;
+}

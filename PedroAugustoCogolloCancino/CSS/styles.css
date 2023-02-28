@@ -1,6 +1,8 @@
 
 body{
     font-family: 'Ubuntu Mono', monospace;
+    color: white;
+    background-color: black;
 }
 
 a{
@@ -8,9 +10,194 @@ a{
 }
 
 hr{
+    height: 10px;
+    width: 90%;
     
+    border-style: none none dashed;
+    border-color: white;
+    border-width: 4px;
+
+    margin-top: 30px;
 }
 
 .tetromino-Img{
     margin: 0px 50px;
+}
+
+.div-parent{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50px 0px;
+}
+
+.tetris-block{
+    width: 50px;
+    height: 50px;
+    border: solid 3px;
+    position: absolute;
+    left: 200px;
+}
+
+/***** I Block properties *****/
+.I-block1{
+    background-color: aqua;
+}
+
+.I-block2{
+    background-color: aqua;
+    top: 50px;
+}
+
+.I-block3{
+    background-color: aqua;
+    top: 100px;
+}
+
+.I-block4{
+    background-color: aqua;
+    top: 150px;
+}
+
+/***** J Block properties *****/
+.J-block1{
+    background-color: blue;
+    left: 200px;
+    
+}
+
+.J-block2{
+    background-color: blue;
+    top: 50px;
+    left: 200px;
+}
+
+.J-block3{
+    background-color: blue;
+    top: 50px;
+    left: 253px;
+}
+
+.J-block4{
+    background-color: blue;
+    top: 50px;
+    left: 303px;
+}
+
+/***** L Block properties *****/
+.L-block1{
+    background-color: orange;
+    left: 200px;
+}
+
+.L-block2{
+    background-color: orange;
+    top: 50px;
+    left: 200px;
+}
+
+.L-block3{
+    background-color: orange;
+    top: 100px;
+    left: 200px;
+}
+
+.L-block4{
+    background-color: orange;
+    top: 100px;
+    left: 253px;
+}
+
+/***** O Block properties *****/
+.O-block1{
+    background-color: yellow;
+    left: 200px;
+}
+
+.O-block2{
+    background-color: yellow;
+    left: 250px;
+}
+
+.O-block3{
+    background-color: yellow;
+    top: 50px;
+    left: 200px;
+}
+
+.O-block4{
+    background-color: yellow;
+    top: 50px;
+    left: 250px;
+}
+
+/***** S Block properties *****/
+.S-block1{
+    background-color: green;
+    left: 313px;
+}
+
+.S-block2{
+    background-color: green;
+    left: 260px;
+}
+
+.S-block3{  
+    background-color: green;
+    top: 53px;
+    left: 260px;
+}
+
+.S-block4{
+    background-color: green;
+    top: 53px;
+    left: 207px;
+}
+
+/***** T Block properties *****/
+.T-block1{
+    background-color: purple;
+    top: 53px;
+    left: 200px;
+}
+
+.T-block2{
+    background-color: purple;
+    top: 53px;
+    left: 253px;
+}
+
+.T-block3{  
+    background-color: purple;
+    top: 53px;
+    left: 306px;
+}
+
+.T-block4{
+    background-color: purple;
+    top: 0px;
+    left: 253px;
+}
+
+/***** Z Block properties *****/
+.Z-block1{
+    background-color: red;
+    left: 200px;
+}
+
+.Z-block2{
+    background-color: red;
+    left: 253px;
+}
+
+.Z-block3{  
+    background-color: red;
+    top: 53px;
+    left: 253px;
+}
+
+.Z-block4{
+    background-color: red;
+    top: 53px;
+    left: 307px;
 }

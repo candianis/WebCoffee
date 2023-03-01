@@ -16,13 +16,11 @@ a{
 
 hr{
     height: 10px;
-    width: 90%;
+    width: auto;
     
     border-style: none none dashed;
     border-color: white;
-    border-width: 4px;
-
-    margin-top: 30px;
+    border-width: 3px;
 }
 
 .space-img{
@@ -44,180 +42,219 @@ hr{
     background-repeat: repeat;
 }
 
-.div-parent{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 50px 0px;
-}
-
 .tetris-block{
     width: 50px;
     height: 50px;
     border: solid 3px;
     position: absolute;
-    left: 200px;
 }
 
 /***** I Block properties *****/
+.I-parent{
+    position: relative;
+    margin-top: 300px;
+}
+
 .I-block1{
     background-color: aqua;
+    top: -250px;
+    left: 200px;
 }
 
 .I-block2{
     background-color: aqua;
-    top: 50px;
+    top: -200px;
+    left: 200px;
 }
 
 .I-block3{
     background-color: aqua;
-    top: 100px;
+    top: -150px;
+    left: 200px;
 }
 
 .I-block4{
     background-color: aqua;
-    top: 150px;
+    top:-100px;
+    left: 200px;
 }
 
 /***** J Block properties *****/
+.J-parent{
+    position: relative;
+    margin-top: 200px;  
+}
+
 .J-block1{
     background-color: blue;
-    left: 200px;
-    
+    top: -150px;  
+    left: 200px;   
 }
 
 .J-block2{
     background-color: blue;
-    top: 50px;
-    left: 200px;
+    top: -100px;
+    left: 200px; 
 }
 
 .J-block3{
     background-color: blue;
-    top: 50px;
+    top: -100px;
     left: 253px;
 }
 
 .J-block4{
     background-color: blue;
-    top: 50px;
+    top: -100px;
     left: 303px;
 }
 
 /***** L Block properties *****/
+.L-parent{
+    position: relative;
+    margin-top: 250px; 
+}
+
 .L-block1{
     background-color: orange;
+    top: -200px;
     left: 200px;
 }
 
 .L-block2{
     background-color: orange;
-    top: 50px;
-    left: 200px;
+    top: -150px;
+    left: 200px; 
 }
 
 .L-block3{
     background-color: orange;
-    top: 100px;
-    left: 200px;
+    top: -100px;
+    left: 200px; 
 }
 
 .L-block4{
     background-color: orange;
-    top: 100px;
+    top: -100px;
     left: 253px;
 }
 
 /***** O Block properties *****/
+.O-parent{
+    position: relative;
+    margin-top: 200px; 
+}
+
 .O-block1{
     background-color: yellow;
-    left: 200px;
+    top: -150px;
+    left: 200px;  
 }
 
 .O-block2{
     background-color: yellow;
+    top: -150px;
     left: 250px;
 }
 
 .O-block3{
     background-color: yellow;
-    top: 50px;
-    left: 200px;
+    top: -100px;
+    left: 200px;  
 }
 
 .O-block4{
     background-color: yellow;
-    top: 50px;
+    top: -100px;
     left: 250px;
 }
 
 /***** S Block properties *****/
+.S-parent{
+    position: relative;
+    margin-top: 200px;
+}
+
 .S-block1{
     background-color: green;
-    left: 313px;
+    top: -100px;
+    left: 200px;   
 }
 
 .S-block2{
     background-color: green;
-    left: 260px;
+    top: -100px;
+    left: 250px;
 }
 
 .S-block3{  
     background-color: green;
-    top: 53px;
-    left: 260px;
+    top: -153px;
+    left: 250px;
 }
 
 .S-block4{
     background-color: green;
-    top: 53px;
-    left: 207px;
+    top: -153px;
+    left: 303px;
 }
 
 /***** T Block properties *****/
+.T-parent{
+    position: relative;
+    margin-top: 200px;  
+}
+
 .T-block1{
     background-color: purple;
-    top: 53px;
-    left: 200px;
+    top: -100px;
+    left: 200px; 
 }
 
 .T-block2{
     background-color: purple;
-    top: 53px;
+    top: -100px;
     left: 253px;
 }
 
 .T-block3{  
     background-color: purple;
-    top: 53px;
+    top: -100px;
     left: 306px;
 }
 
 .T-block4{
     background-color: purple;
-    top: 0px;
+    top: -153px;
     left: 253px;
 }
 
 /***** Z Block properties *****/
+.Z-parent{
+    position: relative;
+    margin-top: 200px; 
+}
+
 .Z-block1{
     background-color: red;
-    left: 200px;
+    top: -150px;
+    left: 200px;  
 }
 
 .Z-block2{
     background-color: red;
-    left: 253px;
+    top: -150px;
+    left: 250px;
 }
 
 .Z-block3{  
     background-color: red;
-    top: 53px;
-    left: 253px;
+    top: -97px;
+    left: 250px;
 }
 
 .Z-block4{
     background-color: red;
-    top: 53px;
-    left: 307px;
+    top: -97px;
+    left: 303px;
 }

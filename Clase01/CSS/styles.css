@@ -21,6 +21,12 @@ h3{
     margin: 0;
 }
 
+hr{
+    height:  3px;
+    background-color: #F6F6F6;
+    border-style: none;
+}
+
 /***** Class Selectors *****/
 
 .top-container{
@@ -29,12 +35,13 @@ h3{
 }
 
 .mid-container{
-    background-color: black;
-    width: 200px;
+
 }
 
 .bot-container{
+    background-color: #6D9886;
     width: 100%;
+    padding: 50px, 0;
 }
 
 .icon-top{
@@ -84,7 +91,120 @@ h3{
     text-decoration: underline;
 }
 
+.profile-img{
+    width: 150px;
+}
+
+.skills{
+    background-color: #D9CAB3;
+    margin: 50px 0px 80px;
+}
+
 .skill-row{
     display: inline-block;
     margin: 100px;
 }
+
+.skill1-img{
+    width: 100px;
+}
+
+.skill2-img{
+    width: 100px;
+}
+
+.skill3-img{
+    width: 100px;
+}
+
+.software{
+    background-color: #D9CAB3;
+    margin: 50px 0px 80px;
+}
+
+.software-row{
+    width: 60%;
+    margin: 80px auto;
+}
+
+
+.software-row :nth-child(even){
+    text-align: left;
+}
+
+.software-row :nth-child(odd){
+    text-align: right;
+}
+
+.software-row :nth-child(1){
+    text-align: center;
+}
+
+.software-h3{
+    text-align: left;
+}
+
+.software-img{
+    height: 100px;
+    background-color: white;
+    border-radius: 100%;
+    padding: 20px;
+    margin: 0px 20px;
+}
+
+.si-left{
+    float: left;
+}
+
+.si-right{
+    float: right;
+}
+
+.footer-hr{
+    margin: 0;
+}
+
+.get-in-touch{
+    color: #F6F6F6;
+}
+
+.contact-me{
+
+}
+
+.copyright{
+    margin: 20px 0 0;
+}
+
+.together{
+    margin: 10px 0 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.together :hover{
+    font-family: monospace;
+}
+
+.btn {
+    background: #3498db;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #3cb0fd;
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
+  .footer-link{
+    text-decoration: none;
+    color: #D9CAB3;
+    margin: 5px 10px;
+  }

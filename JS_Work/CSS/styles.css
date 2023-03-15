@@ -1,0 +1,26 @@
+.tile{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-style: dotted;
+    
+}
+
+.map{
+    position: relative;
+    display: grid;
+    width: 550px;
+    
+}
+
+.row-karel{
+    height: 100px;
+}
+
+.karel{
+    position: absolute;
+    top: 400px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}

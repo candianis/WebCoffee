@@ -1,15 +1,23 @@
 var size = 0;
 var spirals = 0;
-var cells = 0;
+var cells = 1;
 var limit = 0;
-var lastFibo = 0;
+var lastFibo = 1;
 var currentFibo = 1;
+var pickedFruits = 0;
+
+
+dropFruit();
 MakeSquare();
 
 while(spirals < limit)
     MakeSpiral();
-
 paintTile("cyan");
+turnLeft();
+alert(size);
+UndoSpiral();
+UndoSpiral();
+
 function MakeSquare(){
     while(frontIsClear()){
         move();
@@ -17,9 +25,7 @@ function MakeSquare(){
         ++cells;
         CheckFibonacci();
     }
-    alert(size);
     limit = size / 2 + 1;
-    alert(limit);
     
     turnLeft();
     paintTile("red");
@@ -56,4 +62,30 @@ function CheckFibonacci(){
         currentFibo = cells;
         dropFruit();
     }
+}
+
+//Reverse functions
+function moveInReverseN(spacesToMove){
+    let index = 0;
+    while(index < spacesToMove){
+        ++index;
+        if(pickedFruits == 4)
+            break;
+        move();
+    }
+    turnRight();
+}
+
+function UndoSpiral(){
+    alert(size);
+    moveInReverseN(size);
+    ++size;
+    moveInReverseN(size);
+    moveInReverseN(size);
+    ++size;
+    moveInReverseN(size);
+}
+
+function UndoFibonacci(){
+    
 }

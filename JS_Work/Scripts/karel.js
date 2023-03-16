@@ -23,7 +23,8 @@ turnLeft();
 
 while(canMove){
     moveInReverseN();
-    if(size > totalSize){
+    if(size > totalSize && fruitsInPocket() < 4){
+        
         let lastIndex = 0;
         while(lastIndex < totalSize){
             move();

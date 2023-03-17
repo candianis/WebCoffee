@@ -16,9 +16,7 @@ while(spirals < limit)
     MakeSpiral();
 paintTile("cyan");
 turnLeft();
-alert(size);
 size = 1;
-alert(size);
 turnLeft();
 
 while(canMove){

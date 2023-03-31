@@ -25,6 +25,8 @@ let bird = null;
 let upperPipe = null;
 let lowerPipe = null;
 let pipeTimeCount = 0;
+var pipes;
+var pipeVelocity = 150;
 
 //Awake
 function preload(){
@@ -41,23 +43,26 @@ function create(){
   this.physics.add.existing(bird);
   
   this.input.keyboard.on("keydown-SPACE", flap);
+  
+  pipes = this.physics.add.group({
+    allowGravity: false,
+    immovable: true
+  });
+
+  spawnPipes();
+  this.time.addEvent({
+    delay: PipeSpawnTime,
+    callback: () => {
+      spawnPipes(this);
+    },
+    loop: true
+  });
+  this.physics.add.collider(bird, pipes, gameOver, null, this);
 }
 
 //Update
 function update(time, delta){
-  pipeTimeCount += delta;
-  if(pipeTimeCount >= PipeSpawnTime){
-    spawnPipes(this, bird);
-    pipeTimeCount = 0;
-  }
 
-  this.physics.add.collider(bird, lowerPipe, function(){
-    alert("You lose");
-  });
-  this.physics.add.collider(bird, upperPipe, function(){
-    alert("You lose");
-  });
-  
 }
 
 function flap(){
@@ -65,23 +70,19 @@ function flap(){
 }
 
 
-function spawnPipes(game, player){  
+function spawnPipes(){ 
+  var spawnPosition = Phaser.Math.Between(50, 300);
+  var gapSize = Phaser.Math.Between(100, 300);
+  var upper = pipes.create(config.width + 50, spawnPosition, "pipe"). setOrigin(0,1);
+  var lower = pipes.create(config.width + 50, spawnPosition + gapSize, "pipe").setOrigin(0);
+  lower.body.velocity.x = -pipeVelocity;
+  upper.body.velocity.x = -pipeVelocity;
 
-  let spaceLeft = Phaser.Math.Between(player.height, player.height * 2);
+}
 
-  let randomDistance = Phaser.Math.Between(0, 50);
-  lowerPipe = game.add.sprite(config.width + 50, randomDistance - spaceLeft, "pipe");
-  game.physics.add.existing(lowerPipe);
-  lowerPipe.body.allowGravity = false;
-  lowerPipe.body.immovable = true;
-  lowerPipe.body.velocity.x = -100;
-
-  randomDistance = Phaser.Math.Between(550, 600);
-  upperPipe = game.add.sprite(config.width + 50, randomDistance + spaceLeft, "pipe");
-  game.physics.add.existing(upperPipe);
-  upperPipe.body.allowGravity = false;
-  upperPipe.body.immovable = true;
-  upperPipe.body.velocity.x = -100;
+function gameOver(){
+  alert("You lose");
+  this.scene.reset();
 }
 
 var game = new Phaser.Game(config);

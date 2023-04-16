@@ -41,6 +41,8 @@ export default class PipeSystem {
         
         if(this.pool.length > 0){
             pipe = this.pool[0];
+            pipe.resetPosition();
+            this.pool.splice(0, 1);
         }
         else {
             pipe = new Pipe(this.group, this.scene.config.width);
@@ -54,8 +56,8 @@ export default class PipeSystem {
     moveToPool(pipe, index){
         this.pipes.splice(index, 1);
         this.pool.push(pipe);
-        pipe.visible = false;
-        pipe.velocity.x = 0;
+        pipe.setVisible(false);
+        pipe.setVelocity(0);
     }
 
     getGroup(){
@@ -70,8 +72,8 @@ class Pipe {
         this.pipeGapSizeRange = DEFAULT_GAP_SIZE_RANGE;
         var spawnPosition = Phaser.Math.Between(...this.pipeSpawnPositionRange);
         var gapSize = Phaser.Math.Between(...this.pipeGapSizeRange);
-        this.upper = this.group.create(spawnX, spawnPosition, "pipe").setOrigin(0,1);
-        this.lower = this.group.create(spawnX, spawnPosition + gapSize, "pipe").setOrigin(0);
+        this.upper = group.create(spawnX, spawnPosition, "pipe").setOrigin(0,1);
+        this.lower = group.create(spawnX, spawnPosition + gapSize, "pipe").setOrigin(0);
     }
 
     resetVelocity(){
@@ -89,6 +91,6 @@ class Pipe {
     }
 
     hasExitedScreen(){
-        return this.upper.body.getBound().right < 0;
+        return this.upper.body.getBounds().right < 0;
     }
 }

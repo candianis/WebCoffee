@@ -21,9 +21,12 @@ export default class ScoreScene extends FlappyBirdScene {
         const back = this.add.text(this.config.width - 16, 16, "Back", {fontSize: "24px"})
         .setOrigin(1, 0)
         .setInteractive();
-
-        back.on("pointerup", ()=> this.scene.start("MenuScene"));
-        back.on("pointerover", ()=> back.setFill("0F0"));
+        
+        back.on("pointerup", ()=> {
+            this.hideMenu();
+            this.scene.start("MenuScene");
+        });
+        back.on("pointerover", ()=> back.setFill("0F0"));  `friend`
         back.on("pointerout", ()=> back.setFill("#FFF"));
     }
 }

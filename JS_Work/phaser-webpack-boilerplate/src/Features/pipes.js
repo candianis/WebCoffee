@@ -31,7 +31,7 @@ export default class PipeSystem {
     }
 
     update(){
-        if(this.stopped) return;
+        if(this.stopped || this.scene.paused) return;
         for(let i = 0; i < this.pipes.length; i++) {
             const pipe = this.pipes[i];
             if(pipe.hasExitedScreen()){
@@ -44,12 +44,25 @@ export default class PipeSystem {
 
     stop(){
         this.stopped = true;
+
         if(this.spawnTimer){
             this.spawnTimer.remove();
         }
         this.pipes.forEach(pipe => {
             pipe.setVelocity(0);
         })
+    }
+
+    pause(){
+        if(this.spawnTimer){
+            this.spawnTimer.paused = true;
+        }
+    }
+
+    resume(){
+        if(this.spawnTimer){
+            this.spawnTimer.paused = false;
+        }
     }
 
     spawnPipes(){ 
@@ -61,7 +74,7 @@ export default class PipeSystem {
             this.pool.splice(0, 1);
         }
         else {
-            pipe = new Pipe(this.group, this.scene.config.width);
+            pipe = new Pipe(this.group, this.scene.config.width, this.layer);
         }
         pipe.setVelocity(PIPE_VELOCITY);
         pipe.setVisible(true);

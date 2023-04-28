@@ -7,7 +7,7 @@ export default class MenuScene extends FlappyBirdScene {
     }
 
     preload(){
-        this.load.image("sky", '')
+        this.load.image("sky", "assets/sky.png");
     }
 
     create(){
@@ -36,10 +36,12 @@ export default class MenuScene extends FlappyBirdScene {
     }
 
     playButton_onClick(){
+        this.hideMenu();
         this.scene.start("GameScene");
     }
 
     scoreButton_OnClick(){
+        this.hideMenu();
         this.scene.start("ScoreScene");
     }
 

@@ -12,6 +12,7 @@ const SHARED_CONFIG = {
 const config = {
   type: Phaser.AUTO,
   ...SHARED_CONFIG,
+  pixelArt: true,
   physics: {
     default: "arcade",
     arcade:{
@@ -20,8 +21,8 @@ const config = {
     }
     },
     scene: [
-      new GameScene(SHARED_CONFIG),
       new MenuScene(SHARED_CONFIG),
+      new GameScene(SHARED_CONFIG),
       new ScoreScene(SHARED_CONFIG)
     ]
   }

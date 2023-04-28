@@ -20,7 +20,8 @@ export default class Score {
         this.currentScoreText = scene.add.text(x, y, "Score: " + this.currentScoreValue);
         this.highscoreText = scene.add.text(x, y +10, "High Score: " + this.highscoreValue).setOrigin(0);
 
-        layer.add([this.currentScoreText, this.highscoreText]);
+        layer.add(this.currentScoreText);
+        layer.add(this.highscoreText);
     }
 
     addScore(){

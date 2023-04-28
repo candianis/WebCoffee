@@ -7,6 +7,7 @@ export default class FlappyBirdScene extends Phaser.Scene {
             game: null,
             ui: null
         }
+        this.activeMenu;
     }
 
     create(){
@@ -19,8 +20,9 @@ export default class FlappyBirdScene extends Phaser.Scene {
     }
 
     showMenu(menu){
+        this.hideMenu();
         let yPos = menu.firstItemPosition.y;
-        
+        this.activeMenu = this.add.group();
         menu.items.forEach(item => {
             const textObject = this.add.text(menu.firstItemPosition.x, yPos, item.label, item.style)
             .setOrigin(menu.origin.x, menu.origin.y)
@@ -29,6 +31,12 @@ export default class FlappyBirdScene extends Phaser.Scene {
             textObject.on("pointerup", item.onClick, this);
             textObject.on("pointerover", ()=> {item.onMouseEnter(textObject)}, this);
             textObject.on("pointerout", ()=> {item.onMouseExit(textObject)}, this);
+            this.activeMenu.add(textObject);
         })
+    }
+
+    hideMenu(){
+        if(this.activeMenu) this.activeMenu.clear(true, true);
+        this.activeMenu = null;
     }
 }

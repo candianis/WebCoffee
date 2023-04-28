@@ -5,7 +5,7 @@ const DEFAULT_GAP_SIZE_RANGE = [100, 300];
 
 
 export default class PipeSystem {
-    constructor(scene){
+    constructor(scene, layer){
         this.scene = scene;
         this.group = this.scene.physics.add.group({
             allowGravity: false,
@@ -13,27 +13,43 @@ export default class PipeSystem {
         });
         this.pipes = [];
         this.pool = [];
+        this.layer = layer;
+        this.onPipeExited = ()=>{};
+        this.stopped = false;
+        this.spawnTimer = null;
     }
 
     start() {
         this.spawnPipes();
-        this.scene.time.addEvent({
+        this.spawnTimer = this.scene.time.addEvent({
           delay: PIPE_SPAWN_TIME,
           callback: () => {
-            this.spawnPipes(this);
+            this.spawnPipes();
           },
           loop: true
         });
     }
 
     update(){
+        if(this.stopped) return;
         for(let i = 0; i < this.pipes.length; i++) {
             const pipe = this.pipes[i];
             if(pipe.hasExitedScreen()){
                 this.moveToPool(pipe, i);
+                this.onPipeExited();
                 break;
             }
         }
+    }
+
+    stop(){
+        this.stopped = true;
+        if(this.spawnTimer){
+            this.spawnTimer.remove();
+        }
+        this.pipes.forEach(pipe => {
+            pipe.setVelocity(0);
+        })
     }
 
     spawnPipes(){ 
@@ -66,14 +82,16 @@ export default class PipeSystem {
 }
 
 class Pipe {
-    constructor(group, spawnX){
+    constructor(group, spawnX, layer){
         this.group = group;
+        this.spawnX = spawnX;
         this.pipeSpawnPositionRange = DEFAULT_PIPE_SPAWN_POSITION_RANGE;
         this.pipeGapSizeRange = DEFAULT_GAP_SIZE_RANGE;
         var spawnPosition = Phaser.Math.Between(...this.pipeSpawnPositionRange);
         var gapSize = Phaser.Math.Between(...this.pipeGapSizeRange);
         this.upper = group.create(spawnX, spawnPosition, "pipe").setOrigin(0,1);
         this.lower = group.create(spawnX, spawnPosition + gapSize, "pipe").setOrigin(0);
+        layer.add([this.upper, this.lower]);
     }
 
     resetVelocity(){
@@ -83,11 +101,20 @@ class Pipe {
     setVelocity(velocity){
         this.lower.body.velocity.x = -velocity;
         this.upper.body.velocity.x = -velocity;
+        var spawnPosition = Phaser.Math.Between(...this.pipeSpawnPositionRange);
+        var gapSize = Phaser.Math.Between(...this.pipeGapSizeRange);
+        this.upper.y = spawnPosition;
+        this.lower.y = spawnPosition + gapSize;
     }
 
     setVisible(state){
         this.upper.visible = state;
         this.lower.visible = state;
+    }
+
+    resetPosition(){
+        this.upper.x = this.spawnX;
+        this.lower.x = this.spawnY;
     }
 
     hasExitedScreen(){
